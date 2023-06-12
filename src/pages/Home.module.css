@@ -1,0 +1,8 @@
+.conteinerAbout {
+  display: flex;
+}
+
+.verticalLine {
+  border-left: 1px solid black;
+  background-color: 'black'
+}
