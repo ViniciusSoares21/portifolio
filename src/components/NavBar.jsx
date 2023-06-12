@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import styles from './NavBar.module.css'
+import imgGitHub from '../image/github.svg'
+import imgLinkedin from '../image/linkedin.svg'
+import imgEmail from '../image/email.svg'
 
 function NavBar() {
   const [isProjectsVisible, setIsProjectsVisible] = useState(false);
@@ -47,10 +50,9 @@ function NavBar() {
         onMouseEnter={menuProjectsVisible}
         onMouseLeave={menuProjectsNotVisible}
         >
-          <p>FULL-STACK</p>
-          <p>FRONT-END</p>
-          <p>BACK-END</p>
-          <p>ANALISE DE DADOS</p>
+          <p style={{ marginTop: '12px'}}>💼Full-stack</p>
+          <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
+          <p style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}>🗄️Back-end</p>
         </div>
       }
       <p 
@@ -66,9 +68,9 @@ function NavBar() {
         onMouseEnter={menuContactVisible}
         onMouseLeave={menuContactNotVisible}
         >
-          <p>linkdein</p>
-          <p>GitHub</p>
-          <p>Email</p>
+          <img style={{ marginTop: '12px' }} src={imgLinkedin} alt="linkdein" />
+          <img style={{ marginTop: '12px' }} src={imgGitHub} alt="GitHub" />
+          <img style={{ marginTop: '12px' }} src={imgEmail} alt="Email" />
         </div>
       }
       <p className={ styles.links }>SOBRE</p>

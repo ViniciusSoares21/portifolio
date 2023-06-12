@@ -14,15 +14,27 @@
 }
 
 .menuProjectLink {
+  text-align: center;
+  display: block;
+  height: 110px;
+  width: 115px;
   position: absolute;
-  top: 9%;
-  right: 25%;
+  border-radius: 8px;
+  justify-content: center;
+  top: 8%;
+  right: 29%;
   background-color: rgba(12, 35, 70, 1);
 }
 
 .menuContactLink {
+  height: 128px;
+  width: 40px;
+  display: flex;
+  border-radius: 8px;
+  flex-direction: column;
   position: absolute;
-  top: 9%;
+  align-items: center;
+  top: 8%;
   right: 18%;
   background-color: rgba(12, 35, 70, 1);
 }
