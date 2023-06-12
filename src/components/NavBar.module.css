@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  height: 60px;
+  background-color: rgba(12, 35, 70, 1);
+  color: white;
+  justify-content: end;
+  align-items: center;
+}
+
+.links {
+  margin-right: 5%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menuProjectLink {
+  position: absolute;
+  top: 9%;
+  right: 25%;
+  background-color: rgba(12, 35, 70, 1);
+}
+
+.menuContactLink {
+  position: absolute;
+  top: 9%;
+  right: 18%;
+  background-color: rgba(12, 35, 70, 1);
+}
