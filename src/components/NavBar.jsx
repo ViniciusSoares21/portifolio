@@ -3,38 +3,33 @@ import styles from './NavBar.module.css'
 
 function NavBar() {
   const [isProjectsVisible, setIsProjectsVisible] = useState(false);
-  const [isContactVisible, setIsContactVisible] = useState(false);
   const [isMenuProjectVisible, setIsMenuProjectVisible] = useState(false);
+  const [isContactVisible, setIsContactVisible] = useState(false);
   const [isMenuContactVisible, setIsMenuContactVisible] = useState(false)
 
 
 
   const handleMouseProjectsEnter = () => setIsProjectsVisible(true);
   const handleMouseProjectsLeave = () => {
-      if (isMenuProjectVisible) {
-          setIsProjectsVisible(false);
-      }
+    setTimeout(() => {
+      setIsProjectsVisible(false);
+    }, 100);
   };
   
   const menuProjectsVisible = () => setIsMenuProjectVisible(true);
-  const menuProjectsNotVisible = () => {
-    setIsMenuProjectVisible(false);
-    setIsProjectsVisible(false);
-  };
+  const menuProjectsNotVisible = () => setIsMenuProjectVisible(false);
 
 
   const handleMouseContactEnter = () => setIsContactVisible(true);
   const handleMouseContactLeave = () => {
-    if (isMenuContactVisible) {
+    setTimeout(() => {
       setIsContactVisible(false);
-    }
+    }, 100);
   };
 
-  const menuContactVisible = () => setIsContactVisible(true);
-  const menuContactNotVisible = () => {
-    setIsMenuContactVisible(false);
-    setIsContactVisible(false);
-  };
+  const menuContactVisible = () => setIsMenuContactVisible(true);
+  const menuContactNotVisible = () => setIsMenuContactVisible(false);
+
 
 
   return ( 
@@ -46,7 +41,7 @@ function NavBar() {
       >
         PROJETOS
       </p>
-      {isProjectsVisible && 
+      {(isProjectsVisible || isMenuProjectVisible) && 
         <div 
         className={styles.menuProjectLink}
         onMouseEnter={menuProjectsVisible}
@@ -65,7 +60,7 @@ function NavBar() {
       >
         CONTATO
       </p>
-      {isContactVisible && 
+      {(isContactVisible || isMenuContactVisible)  && 
         <div 
         className={styles.menuContactLink}
         onMouseEnter={menuContactVisible}
