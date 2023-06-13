@@ -2,6 +2,7 @@ import React from 'react'
 import imgAvatar from '../image/sobreMim 1.jpg'
 import styles from './Home.module.css'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -16,6 +17,7 @@ function Home() {
           Atualmente estudo Desenvolvimento de software fullstack 
         </p>
       </div>
+      <Footer />
     </section>
   )
 }
