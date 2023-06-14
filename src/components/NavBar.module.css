@@ -7,6 +7,12 @@
   align-items: center;
 }
 
+@media (min-width: 2000px) {
+  .container {
+    justify-content: center;
+  }
+}
+
 .links {
   margin-right: 5%;
   font-weight: 500;
