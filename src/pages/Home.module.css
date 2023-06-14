@@ -1,8 +1,31 @@
+.container {
+  max-width: 1020px;
+  margin: auto;
+}
+
 .conteinerAbout {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 70px;
+  width: 90%;
 }
+
+.conteinerAbout img {
+  height: 220px;
+  margin-right: 5%;
+}
+
+.conteinerAbout p {
+  height: 220px;
+  margin-left: 5%;
+  width: 30%;
+}
+
 
 .verticalLine {
   border-left: 1px solid black;
-  background-color: 'black'
+  background-color: 'black';
+  height: 300px;
 }
