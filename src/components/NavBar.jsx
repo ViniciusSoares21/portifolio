@@ -37,7 +37,8 @@ function NavBar() {
 
   return ( 
     <header className={ styles.container }>
-      <p 
+      <p
+        style={isProjectsVisible || isMenuProjectVisible ? { color: 'white', fontWeight: 600} : null}
         className={ styles.links } 
         onMouseEnter={handleMouseProjectsEnter}
         onMouseLeave={handleMouseProjectsLeave} 
@@ -55,7 +56,8 @@ function NavBar() {
           <p style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}>🗄️Back-end</p>
         </div>
       }
-      <p 
+      <p
+        style={isContactVisible || isMenuContactVisible ? { color: 'white', fontWeight: 600} : null} 
         className={ styles.links }
         onMouseEnter={handleMouseContactEnter}
         onMouseLeave={handleMouseContactLeave}
@@ -68,9 +70,21 @@ function NavBar() {
         onMouseEnter={menuContactVisible}
         onMouseLeave={menuContactNotVisible}
         >
-          <img style={{ marginTop: '12px' }} src={imgLinkedin} alt="linkdein" />
-          <img style={{ marginTop: '12px' }} src={imgGitHub} alt="GitHub" />
-          <img style={{ marginTop: '12px' }} src={imgEmail} alt="Email" />
+           <a 
+        href="https://www.linkedin.com/in/vinicius-soares21/"
+        target="_blank" 
+        rel="noopener noreferrer"
+        >
+        <img style={{ marginTop: '12px' }} src={imgLinkedin} alt="Linkedin" />
+      </a>
+      <a 
+        href="https://github.com/ViniciusSoares21"
+        target="_blank" 
+        rel="noopener noreferrer"
+        >
+        <img style={{ marginTop: '10px' }} src={imgGitHub} alt="GitHub" />
+      </a>
+          <img style={{ marginTop: '8px' }} src={imgEmail} alt="Email" />
         </div>
       }
       <p className={ styles.links }>SOBRE</p>

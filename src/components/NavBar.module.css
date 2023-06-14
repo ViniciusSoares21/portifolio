@@ -13,6 +13,11 @@
   cursor: pointer;
 }
 
+.links:hover {
+  color: white;
+  font-weight: 600;
+}
+
 .menuProjectLink {
   text-align: center;
   display: block;
@@ -21,9 +26,15 @@
   position: absolute;
   border-radius: 8px;
   justify-content: center;
-  top: 8%;
+  top: 6.5%;
   right: 29%;
   background-color: rgba(12, 35, 70, 1);
+  cursor: pointer;
+}
+
+.menuProjectLink p:hover {
+  color: white;
+  font-weight: 600;
 }
 
 .menuContactLink {
@@ -34,7 +45,11 @@
   flex-direction: column;
   position: absolute;
   align-items: center;
-  top: 8%;
+  top: 6.5%;
   right: 18%;
   background-color: rgba(12, 35, 70, 1);
+}
+
+.menuContactLink img:hover {
+  filter: brightness(50%);
 }
