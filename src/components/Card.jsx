@@ -1,20 +1,20 @@
 import React from 'react'
 
-function Card({title, description, image}) {
+function Card({title, shortDescription, image, technologies, links}) {
   return (
     <div>
-      <h3>{title}</h3>
       <img src={image} alt="" />
-      <p>{description}</p>
+      <h3>{title}</h3>
+      <p>{shortDescription}</p>
       <p>TECNOLOGIAS:</p>
       <div>
-        {[].map((item) => 
+        {technologies.map((item) => 
           <img key={item} src={item} alt="tecnoligia" />
         )}
       </div>
       <div>
-      {[].map((link) => 
-          <a key={link} href={link}></a>
+      {links.map((item) => 
+          <a key={item.link + item.name} href={item.link}>{item.name}</a>
         )}
       </div>
     </div>

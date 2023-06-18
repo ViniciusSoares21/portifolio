@@ -4,6 +4,7 @@ import styles from './Home.module.css'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import Card from '../components/Card'
+import projects from '../assets/database/prejects'
 
 function Home() {
   return (
@@ -21,11 +22,16 @@ function Home() {
         </div>
       </main>
       <article>
-        <Card 
-          description='Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-          Lorem Ipsum has been the industrys
-          standard dummy text ever since the 1500s, when an unknown printer took a galley '
+        {projects.map(({title, shortDescription, image, technologies, links}) => 
+        <Card
+          key={title}
+          image={image}
+          title={title}
+          shortDescription={shortDescription}
+          technologies={technologies}
+          links={links}
         />
+        )}
       </article>
       <Footer />
     </section>
