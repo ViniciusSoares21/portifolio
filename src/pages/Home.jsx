@@ -10,7 +10,7 @@ function Home() {
   return (
     <section>
       <NavBar />
-      <main className={styles.container} >
+      <main className={styles.container}>
         <div className={styles.conteinerAbout}>
           <img src={imgAvatar} alt="Avatar" />
           <div className={styles.verticalLine}>&nbsp;</div>
@@ -20,19 +20,22 @@ function Home() {
             Atualmente estudo Desenvolvimento de software fullstack 
           </p>
         </div>
+      
+        <h3>Projetos</h3>
+        <article className={styles.containerCards}>
+          {projects.map(({title, shortDescription, image, technologies, links}) => 
+          <Card
+            key={title}
+            image={image}
+            title={title}
+            shortDescription={shortDescription}
+            technologies={technologies}
+            links={links}
+          />
+          
+          )}
+        </article>
       </main>
-      <article>
-        {projects.map(({title, shortDescription, image, technologies, links}) => 
-        <Card
-          key={title}
-          image={image}
-          title={title}
-          shortDescription={shortDescription}
-          technologies={technologies}
-          links={links}
-        />
-        )}
-      </article>
       <Footer />
     </section>
   )

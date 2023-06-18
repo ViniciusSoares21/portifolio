@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
+import styles from './Card.module.css';
 
 function Card({title, shortDescription, image, technologies, links}) {
   const [isProjectsDetailsVisible, setIsProjectsDetailsVisible] = useState(false);
@@ -12,26 +13,32 @@ function Card({title, shortDescription, image, technologies, links}) {
       onMouseEnter={handleMouseProjectsEnter}
       onMouseLeave={handleMouseProjectsLeave}
     >
-      <img src={image} alt="" />
-      <h3>{title}</h3>
-      {isProjectsDetailsVisible ? (
-        <div>
-          <p>{shortDescription}</p>
-          <p>TECNOLOGIAS:</p>   
-          <div>
-            {technologies.map((item) => 
-              <img key={item} src={item} alt="tecnoligia" />
-            )}
-          </div>
-          <div>
-          {links.map((item) => 
-              <a key={item.link + item.name} href={item.link}>{item.name}</a>
-            )}
-          </div>
+      <div>
+        <img className={styles.image} src={image} alt="" />
+        {!isProjectsDetailsVisible &&
+        <div className={styles.title}>
+          <h4>{title}</h4>
         </div>
-       
-      ) : null
-      }
+        }
+        {isProjectsDetailsVisible ? (
+          <div>
+            <p>{shortDescription}</p>
+            <p>TECNOLOGIAS:</p>   
+            <div>
+              {technologies.map((item) => 
+                <img key={item} src={item} alt="tecnoligia" />
+              )}
+            </div>
+            <div>
+            {links.map((item) => 
+                <a key={item.link + item.name} href={item.link}>{item.name}</a>
+              )}
+            </div>
+          </div>
+        
+        ) : null
+        }
+      </div>
     </div>
   )
 }

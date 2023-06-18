@@ -23,6 +23,19 @@
   width: 30%;
 }
 
+.container h3 {
+  margin-top: 100px;
+  margin-left: 20px;
+  font-size: large;
+}
+
+.containerCards {
+  margin-top: 30px;
+  margin-bottom: 75px;
+  display: flex;
+  justify-content: space-around;
+}
+
 
 .verticalLine {
   border-left: 1px solid black;
