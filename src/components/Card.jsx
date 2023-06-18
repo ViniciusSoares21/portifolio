@@ -10,26 +10,31 @@ function Card({title, shortDescription, image, technologies, links}) {
 
   return (
     <div
+      className={isProjectsDetailsVisible && styles.container}
       onMouseEnter={handleMouseProjectsEnter}
       onMouseLeave={handleMouseProjectsLeave}
     >
       <div>
-        <img className={styles.image} src={image} alt="" />
+        <img 
+          className={!isProjectsDetailsVisible ? styles.image : styles.imageWithDetail} 
+          src={image} 
+          alt=""
+        />
         {!isProjectsDetailsVisible &&
-        <div className={styles.title}>
-          <h4>{title}</h4>
-        </div>
+          <div className={styles.title}>
+            <h4>{title}</h4>
+          </div>
         }
         {isProjectsDetailsVisible ? (
-          <div>
+          <div className={styles.subContainer}>
             <p>{shortDescription}</p>
-            <p>TECNOLOGIAS:</p>   
-            <div>
+            <h4>TECNOLOGIAS:</h4>   
+            <div className={styles.containerTechnologies}>
               {technologies.map((item) => 
                 <img key={item} src={item} alt="tecnoligia" />
               )}
             </div>
-            <div>
+            <div className={styles.containerLinks}>
             {links.map((item) => 
                 <a key={item.link + item.name} href={item.link}>{item.name}</a>
               )}

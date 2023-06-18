@@ -1,6 +1,17 @@
+.container {
+  max-width: 350px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .image {
   height: 250px;
   width: 300px;
+  object-fit: cover;
+}
+
+.imageWithDetail {
+  height: 280px;
+  width: 350px;
   object-fit: cover;
 }
 
@@ -15,4 +26,38 @@
 .title h4 {
   margin-left: 15px;
   color: white;
+}
+
+.subContainer {
+  width: 85%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.subContainer h4 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+
+.containerTechnologies img {
+  margin-left: 10px;
+}
+
+.containerLinks {
+  margin-top: 25px;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.containerLinks a {
+  color: black;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.containerLinks a:hover {
+  color: blue;
 }
