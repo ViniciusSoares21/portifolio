@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Card({title, shortDescription, image, technologies, links}) {
   return (
@@ -20,5 +21,18 @@ function Card({title, shortDescription, image, technologies, links}) {
     </div>
   )
 }
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
 export default Card 
