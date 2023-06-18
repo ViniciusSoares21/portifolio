@@ -1,23 +1,37 @@
-import React from 'react';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 
 function Card({title, shortDescription, image, technologies, links}) {
+  const [isProjectsDetailsVisible, setIsProjectsDetailsVisible] = useState(false);
+
+  const handleMouseProjectsEnter = () => setIsProjectsDetailsVisible(true);
+  const handleMouseProjectsLeave = () => setIsProjectsDetailsVisible(false);
+
   return (
-    <div>
+    <div
+      onMouseEnter={handleMouseProjectsEnter}
+      onMouseLeave={handleMouseProjectsLeave}
+    >
       <img src={image} alt="" />
       <h3>{title}</h3>
-      <p>{shortDescription}</p>
-      <p>TECNOLOGIAS:</p>
-      <div>
-        {technologies.map((item) => 
-          <img key={item} src={item} alt="tecnoligia" />
-        )}
-      </div>
-      <div>
-      {links.map((item) => 
-          <a key={item.link + item.name} href={item.link}>{item.name}</a>
-        )}
-      </div>
+      {isProjectsDetailsVisible ? (
+        <div>
+          <p>{shortDescription}</p>
+          <p>TECNOLOGIAS:</p>   
+          <div>
+            {technologies.map((item) => 
+              <img key={item} src={item} alt="tecnoligia" />
+            )}
+          </div>
+          <div>
+          {links.map((item) => 
+              <a key={item.link + item.name} href={item.link}>{item.name}</a>
+            )}
+          </div>
+        </div>
+       
+      ) : null
+      }
     </div>
   )
 }
