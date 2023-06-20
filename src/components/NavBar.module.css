@@ -14,14 +14,16 @@
 }
 
 .links {
+  color: rgba(188, 188, 188, 1);
   margin-right: 5%;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .links:hover {
   color: white;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .menuProjectLink {
@@ -36,6 +38,11 @@
   right: 29%;
   background-color: rgba(12, 35, 70, 1);
   cursor: pointer;
+}
+
+.linkPreject {
+  color: rgba(188, 188, 188, 1);
+  text-decoration: none;
 }
 
 .menuProjectLink p:hover {

@@ -3,6 +3,7 @@ import styles from './NavBar.module.css'
 import imgGitHub from '../image/github.svg'
 import imgLinkedin from '../image/linkedin.svg'
 import imgEmail from '../image/email.svg'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   const [isProjectsVisible, setIsProjectsVisible] = useState(false);
@@ -51,9 +52,19 @@ function NavBar() {
         onMouseEnter={menuProjectsVisible}
         onMouseLeave={menuProjectsNotVisible}
         >
-          <p style={{ marginTop: '12px'}}>💼Full-stack</p>
-          <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
-          <p style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}>🗄️Back-end</p>
+          <Link className={styles.linkPreject} to="/fullstack">
+            <p style={{ marginTop: '12px'}}>💼Full-stack</p>
+          </Link>
+          <Link className={styles.linkPreject} to="/forntend">
+            <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
+          </Link>
+          <Link className={styles.linkPreject} to="/backend">
+            <p 
+            style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}
+            >
+              🗄️Back-end
+            </p>
+          </Link>
         </div>
       }
       <p
@@ -87,7 +98,9 @@ function NavBar() {
           <img style={{ marginTop: '8px' }} src={imgEmail} alt="Email" />
         </div>
       }
-      <p className={ styles.links }>SOBRE</p>
+      <Link className={ styles.links } to="/About">
+        <p>SOBRE</p>
+      </Link>
     </header>
   )
 }
