@@ -55,7 +55,7 @@ function NavBar() {
           <Link className={styles.linkPreject} to="/fullstack">
             <p style={{ marginTop: '12px'}}>💼Full-stack</p>
           </Link>
-          <Link className={styles.linkPreject} to="/forntend">
+          <Link className={styles.linkPreject} to="/frontend">
             <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
           </Link>
           <Link className={styles.linkPreject} to="/backend">
