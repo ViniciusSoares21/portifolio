@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './Card.module.css';
+import { Link } from 'react-router-dom';
 
 function Card({title, shortDescription, image, technologies, links}) {
   const [isProjectsDetailsVisible, setIsProjectsDetailsVisible] = useState(false);
@@ -15,11 +16,16 @@ function Card({title, shortDescription, image, technologies, links}) {
       onMouseLeave={handleMouseProjectsLeave}
     >
       <div>
-        <img 
-          className={!isProjectsDetailsVisible ? styles.image : styles.imageWithDetail} 
-          src={image} 
-          alt=""
-        />
+        <Link to={{
+          pathname: `/project/${title}`, 
+          state: { title } 
+        }}>
+          <img 
+            className={!isProjectsDetailsVisible ? styles.image : styles.imageWithDetail} 
+            src={image} 
+            alt=""
+          />
+        </Link>
         {!isProjectsDetailsVisible &&
           <div className={styles.title}>
             <h4>{title}</h4>
