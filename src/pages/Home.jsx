@@ -23,7 +23,8 @@ function Home() {
       
         <h3>Projetos</h3>
         <article className={styles.containerCards}>
-          {projects.map(({title, shortDescription, image, technologies, links}) => 
+          {projects.filter((item) => item.showOnHome === true)
+            .map(({title, shortDescription, image, technologies, links}) => 
           <Card
             key={title}
             image={image}
