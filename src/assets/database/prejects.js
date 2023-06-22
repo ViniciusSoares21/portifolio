@@ -12,7 +12,9 @@ const projects = [
     links: [
       {link: 'https://gcontrole.com/', name:'PREVIEW' },
       {link: 'https://github.com/ViniciusSoares21', name:'GITHUB' }
-    ]
+    ],
+    type: '/backend',
+    showOnHome: true
   },
   {
     image: 'src/assets/database/image/Rectangle 2.png',
@@ -27,7 +29,9 @@ const projects = [
     links: [
       {link: 'https://gcontrole.com/', name:'PREVIEW' },
       {link: 'https://github.com/ViniciusSoares21', name:'GITHUB' }
-    ]
+    ],
+    type: '/frontend',
+    showOnHome: true
   },
   {
     image: 'src/assets/database/image/Rectangle 2.png',
@@ -42,7 +46,9 @@ const projects = [
     links: [
       {link: 'https://gcontrole.com/', name:'PREVIEW' },
       {link: 'https://github.com/ViniciusSoares21', name:'GITHUB' }
-    ]
+    ],
+    type: '/frontend',
+    showOnHome: true
   },
 ]
  
