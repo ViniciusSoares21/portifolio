@@ -23,7 +23,7 @@ function ProjectDetails() {
                 className={styles.image}
                 src={`${publicPath}${image}`} alt="imagem do projeto"/>
               <h3 
-                style={{ textAlign: 'center', marginBottom: '20px'}}
+                style={{ textAlign: 'center', marginBottom: '20px', fontSize: '25px'}}
               >
                 DESCRIÇÃO DO PROJETO
               </h3>
@@ -41,6 +41,7 @@ function ProjectDetails() {
                   margin: 'auto',
                   width: '90%',
                   marginBottom: '10px',
+                  fontSize: '20px'
                 }}
               >
                 LINGUAGEM E FERRAMENTAS
@@ -54,6 +55,7 @@ function ProjectDetails() {
                   margin: 'auto',
                   width: '90%',
                   marginBottom: '10px',
+                  fontSize: '20px'
                 }}
               >
                 LINKS
