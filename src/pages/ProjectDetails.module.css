@@ -1,6 +1,41 @@
+.container {
+  margin: auto;
+  max-width: 1020px;
+}
+
+.subContainer {
+  margin-left: 50px;
+}
+
 .title {
   text-align: center;
   font-size: 35px;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.containerTechnologies {
+  margin-bottom: 30px;
+}
+
+.containerTechnologies img {
+  margin-left: 10px;
+}
+
+.containerLinks {
+  margin-top: 7px;
+  margin-bottom: 35px;
+  display: flex;
+}
+
+.containerLinks a {
+  color: black;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 400;
+}
+
+.containerLinks a:hover {
+  color: blue;
 }
