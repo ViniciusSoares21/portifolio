@@ -38,69 +38,71 @@ function NavBar() {
 
   return ( 
     <header className={ styles.container }>
-      <p
-        style={isProjectsVisible || isMenuProjectVisible ? { color: 'white', fontWeight: 600} : null}
-        className={ styles.links } 
-        onMouseEnter={handleMouseProjectsEnter}
-        onMouseLeave={handleMouseProjectsLeave} 
-      >
-        PROJETOS
-      </p>
-      {(isProjectsVisible || isMenuProjectVisible) && 
-        <div 
-        className={styles.menuProjectLink}
-        onMouseEnter={menuProjectsVisible}
-        onMouseLeave={menuProjectsNotVisible}
+      <nav className={ styles.navBarContainer }>
+        <p
+          style={isProjectsVisible || isMenuProjectVisible ? { color: 'white', fontWeight: 600} : null}
+          className={ styles.links } 
+          onMouseEnter={handleMouseProjectsEnter}
+          onMouseLeave={handleMouseProjectsLeave} 
         >
-          <Link className={styles.linkPreject} to="/fullstack">
-            <p style={{ marginTop: '12px'}}>💼Full-stack</p>
-          </Link>
-          <Link className={styles.linkPreject} to="/frontend">
-            <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
-          </Link>
-          <Link className={styles.linkPreject} to="/backend">
-            <p 
-            style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}
-            >
-              🗄️Back-end
-            </p>
-          </Link>
-        </div>
-      }
-      <p
-        style={isContactVisible || isMenuContactVisible ? { color: 'white', fontWeight: 600} : null} 
-        className={ styles.links }
-        onMouseEnter={handleMouseContactEnter}
-        onMouseLeave={handleMouseContactLeave}
-      >
-        CONTATO
-      </p>
-      {(isContactVisible || isMenuContactVisible)  && 
-        <div 
-        className={styles.menuContactLink}
-        onMouseEnter={menuContactVisible}
-        onMouseLeave={menuContactNotVisible}
+          PROJETOS
+        </p>
+        {(isProjectsVisible || isMenuProjectVisible) && 
+          <div 
+          className={styles.menuProjectLink}
+          onMouseEnter={menuProjectsVisible}
+          onMouseLeave={menuProjectsNotVisible}
+          >
+            <Link className={styles.linkPreject} to="/fullstack">
+              <p style={{ marginTop: '12px'}}>💼Full-stack</p>
+            </Link>
+            <Link className={styles.linkPreject} to="/frontend">
+              <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
+            </Link>
+            <Link className={styles.linkPreject} to="/backend">
+              <p 
+              style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}
+              >
+                🗄️Back-end
+              </p>
+            </Link>
+          </div>
+        }
+        <p
+          style={isContactVisible || isMenuContactVisible ? { color: 'white', fontWeight: 600} : null} 
+          className={ styles.links }
+          onMouseEnter={handleMouseContactEnter}
+          onMouseLeave={handleMouseContactLeave}
         >
-           <a 
-        href="https://www.linkedin.com/in/vinicius-soares21/"
-        target="_blank" 
-        rel="noopener noreferrer"
-        >
-        <img style={{ marginTop: '12px' }} src={imgLinkedin} alt="Linkedin" />
-      </a>
-      <a 
-        href="https://github.com/ViniciusSoares21"
-        target="_blank" 
-        rel="noopener noreferrer"
-        >
-        <img style={{ marginTop: '10px' }} src={imgGitHub} alt="GitHub" />
-      </a>
-          <img style={{ marginTop: '8px' }} src={imgEmail} alt="Email" />
-        </div>
-      }
-      <Link className={ styles.links } to="/About">
-        <p>SOBRE</p>
-      </Link>
+          CONTATO
+        </p>
+        {(isContactVisible || isMenuContactVisible)  && 
+          <div 
+          className={styles.menuContactLink}
+          onMouseEnter={menuContactVisible}
+          onMouseLeave={menuContactNotVisible}
+          >
+            <a 
+          href="https://www.linkedin.com/in/vinicius-soares21/"
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
+          <img style={{ marginTop: '12px' }} src={imgLinkedin} alt="Linkedin" />
+        </a>
+        <a 
+          href="https://github.com/ViniciusSoares21"
+          target="_blank" 
+          rel="noopener noreferrer"
+          >
+          <img style={{ marginTop: '10px' }} src={imgGitHub} alt="GitHub" />
+        </a>
+            <img style={{ marginTop: '8px' }} src={imgEmail} alt="Email" />
+          </div>
+        }
+        <Link className={ styles.links } to="/About">
+          <p>SOBRE</p>
+        </Link>
+      </nav>
     </header>
   )
 }

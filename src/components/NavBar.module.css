@@ -1,4 +1,9 @@
 .container {
+  background-color: rgba(12, 35, 70, 1);
+  color: rgba(188, 188, 188, 1);
+}
+
+.navBarContainer {
   display: flex;
   height: 60px;
   background-color: rgba(12, 35, 70, 1);
@@ -8,8 +13,8 @@
 }
 
 @media (min-width: 2000px) {
-  .container {
-    justify-content: center;
+  .navBarContainer {
+    margin-right: 23%;
   }
 }
 
