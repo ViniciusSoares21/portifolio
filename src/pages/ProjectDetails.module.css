@@ -4,7 +4,7 @@
 }
 
 .subContainer {
-  margin-left: 50px;
+  max-width: 1020px;
 }
 
 .title {
@@ -14,7 +14,17 @@
   margin-bottom: 50px;
 }
 
+.image {
+  margin-left: 5%;
+  margin-bottom: 30px;
+  height: 450px;
+  width: 90%;
+  /* object-fit: cover; */
+}
+
 .containerTechnologies {
+  width: 90%;
+  margin: auto;
   margin-bottom: 30px;
 }
 
@@ -23,6 +33,8 @@
 }
 
 .containerLinks {
+  width: 90%;
+  margin: auto;
   margin-top: 7px;
   margin-bottom: 35px;
   display: flex;

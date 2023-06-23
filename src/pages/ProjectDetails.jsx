@@ -5,12 +5,11 @@ import Footer from '../components/Footer';
 import styles from './ProjectDetails.module.css';
 import projects from '../assets/database/prejects';
 
-
 function ProjectDetails() {
   const path = useLocation().pathname;
 
   const titleProject = decodeURIComponent(path.split('/')[2]);
-
+  const publicPath = import.meta.env.BASE_URL;
 
   return (
     <main>
@@ -20,22 +19,45 @@ function ProjectDetails() {
         {projects.filter((item) => item.title === titleProject)
           .map(({title, description, image, technologies, links}) =>
             <article key={title} className={styles.subContainer}>
-              <img src={image} alt=""/>
+              <img 
+                className={styles.image}
+                src={`${publicPath}${image}`} alt="imagem do projeto"/>
               <h3 
                 style={{ textAlign: 'center', marginBottom: '20px'}}
               >
                 DESCRIÇÃO DO PROJETO
               </h3>
-              <p style={{ textAlign: 'center', marginBottom: '30px' }}>
+              <p 
+                style={{ 
+                  margin: 'auto',
+                  width: '90%',
+                  marginBottom: '30px',
+                }}
+              >
                 {description}
               </p>
-              <h3>LINGUAGEM E FERRAMENTAS</h3>
+              <h3 
+                style={{ 
+                  margin: 'auto',
+                  width: '90%',
+                  marginBottom: '10px',
+                }}
+              >
+                LINGUAGEM E FERRAMENTAS
+              </h3>
               <div className={styles.containerTechnologies}>
                 {technologies.map((item) => 
-                  <img key={item} src={item} alt="tecnoligia" />
+                  <img key={item} src={`${publicPath}${item}`} alt="tecnoligia" />
                 )}
               </div>
-              <h3>LINKS</h3>
+              <h3 style={{ 
+                  margin: 'auto',
+                  width: '90%',
+                  marginBottom: '10px',
+                }}
+              >
+                LINKS
+              </h3>
               <div className={styles.containerLinks}>
                 {links.map((item) => 
                     <a key={item.link + item.name} href={item.link}>{item.name}</a>
