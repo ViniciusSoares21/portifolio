@@ -9,11 +9,20 @@ function NavBar() {
   const [isProjectsVisible, setIsProjectsVisible] = useState(false);
   const [isMenuProjectVisible, setIsMenuProjectVisible] = useState(false);
   const [isContactVisible, setIsContactVisible] = useState(false);
-  const [isMenuContactVisible, setIsMenuContactVisible] = useState(false)
+  const [isMenuContactVisible, setIsMenuContactVisible] = useState(false);
+  const [positionMenuProject, setPositionMenuProject] = useState({y: '', x: ''})
 
 
 
-  const handleMouseProjectsEnter = () => setIsProjectsVisible(true);
+
+  const handleMouseProjectsEnter = (event) => {
+    const positionBtn = event.target.getBoundingClientRect();
+    const y = positionBtn.top +45
+    const x = positionBtn.right -100
+    setPositionMenuProject({x, y});
+    setIsProjectsVisible(true)
+  };
+
   const handleMouseProjectsLeave = () => {
     setTimeout(() => {
       setIsProjectsVisible(false);
@@ -24,7 +33,15 @@ function NavBar() {
   const menuProjectsNotVisible = () => setIsMenuProjectVisible(false);
 
 
-  const handleMouseContactEnter = () => setIsContactVisible(true);
+  const handleMouseContactEnter = (event) => {
+    const positionBtn = event.target.getBoundingClientRect();
+    const y = positionBtn.top +45
+    const x = positionBtn.right -55
+    setPositionMenuProject({x, y});
+    setIsContactVisible(true)
+  
+  };
+
   const handleMouseContactLeave = () => {
     setTimeout(() => {
       setIsContactVisible(false);
@@ -33,8 +50,6 @@ function NavBar() {
 
   const menuContactVisible = () => setIsMenuContactVisible(true);
   const menuContactNotVisible = () => setIsMenuContactVisible(false);
-
-
 
   return ( 
     <header className={ styles.container }>
@@ -49,6 +64,12 @@ function NavBar() {
         </p>
         {(isProjectsVisible || isMenuProjectVisible) && 
           <div 
+          style={
+            {
+              top: positionMenuProject.y,
+              left: positionMenuProject.x,
+            }
+          }
           className={styles.menuProjectLink}
           onMouseEnter={menuProjectsVisible}
           onMouseLeave={menuProjectsNotVisible}
@@ -77,7 +98,13 @@ function NavBar() {
           CONTATO
         </p>
         {(isContactVisible || isMenuContactVisible)  && 
-          <div 
+          <div
+          style={
+            {
+              top: positionMenuProject.y,
+              left: positionMenuProject.x,
+            }
+          }
           className={styles.menuContactLink}
           onMouseEnter={menuContactVisible}
           onMouseLeave={menuContactNotVisible}
