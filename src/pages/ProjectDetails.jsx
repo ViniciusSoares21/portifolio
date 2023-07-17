@@ -36,21 +36,25 @@ function ProjectDetails() {
               >
                 {description}
               </p>
-              <h3 
-                style={{ textAlign: 'center', marginBottom: '20px', fontSize: '25px'}}
-              >
-                {desing.desingType}
-              </h3>
-              <p 
-                style={{ 
-                  margin: 'auto',
-                  width: '90%',
-                  marginBottom: '30px',
-                }}
-              >
-                {desing.describe}
-              </p>
-              <img className={styles.image} src={desing.img} alt="" />
+              {desing.img ? (
+                <div>
+                  <h3 
+                    style={{ textAlign: 'center', marginBottom: '20px', fontSize: '25px'}}
+                  >
+                    {desing.desingType}
+                  </h3>
+                  <p 
+                    style={{ 
+                      margin: 'auto',
+                      width: '90%',
+                      marginBottom: '30px',
+                    }}
+                  >
+                    {desing.describe}
+                  </p>
+                  <img className={styles.image} src={desing.img} alt="" />
+                </div>
+              ) : null}
               <h3 
                 style={{ 
                   margin: 'auto',

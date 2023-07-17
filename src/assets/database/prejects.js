@@ -9,6 +9,7 @@ const mysql = 'src/assets/database/imageTechnology/mysql.svg';
 const jwt = 'src/assets/database/imageTechnology/jwt.svg';
 const Mocha = 'src/assets/database/imageTechnology/mocha.svg';
 const chai = 'src/assets/database/imageTechnology/chai.svg';
+const node = 'src/assets/database/imageTechnology/nodejs.svg'
 
 
 const projects = [
@@ -44,6 +45,24 @@ const projects = [
     links: [
       {link: '', name:'PREVIEW' },
       {link: 'https://github.com/ViniciusSoares21/blogs-api', name:'GITHUB' }
+    ],
+    type: '/backend',
+    showOnHome: true
+  },
+  {
+    image: 'src/assets/database/image/trybeAndDragons.png',
+    title: 'Trybers and dragons',
+    shortDescription: "Neste projeto, apliquei os princípios da arquitetura SOLID e da Programação Orientada a Objetos (POO) em uma estrutura de jogos de interpretação de papéis, conhecidos como RPG (Role Playing Game).",
+    description: "Neste projeto, apliquei os princípios da arquitetura SOLID e da Programação Orientada a Objetos (POO) em uma estrutura de jogos de interpretação de papéis, conhecidos como RPG (Role Playing Game).",
+    desing: { 
+      img: "", 
+      desingType: "", 
+      describe: ""
+    },
+    technologies: [ typescript, docker, node],
+    links: [
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/trybers-and-dragons', name:'GITHUB' }
     ],
     type: '/backend',
     showOnHome: true
