@@ -1,53 +1,51 @@
+const JavascriptSVG = 'src/assets/database/imageTechnology/javascript.svg';
+const JestSVG = 'src/assets/database/imageTechnology/jest.svg';
+const ReactSVG = 'src/assets/database/imageTechnology/react.svg';
+const exprssSVG = 'src/assets/database/imageTechnology/imgExpress.svg';
+const typescript = 'src/assets/database/imageTechnology/Typecript.svg';
+const docker = 'src/assets/database/imageTechnology/docker.svg';
+const sequelize = 'src/assets/database/imageTechnology/sequelize.svg';
+const mysql = 'src/assets/database/imageTechnology/mysql.svg';
+const jwt = 'src/assets/database/imageTechnology/jwt.svg';
+const Mocha = 'src/assets/database/imageTechnology/mocha.svg';
+const chai = 'src/assets/database/imageTechnology/chai.svg';
+
+
 const projects = [
   {
     image: 'src/assets/database/image/Rectangle2.png',
     title: 'Trybe futebol clube',
-    shortDescription: "Lorem Ipsum is simply dumy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley ",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ebr Lorem Ipsum has been the industry's standard dummy text ever since the cfe 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    technologies: [
-      'src/assets/database/imageTechnology/react.svg', 
-      'src/assets/database/imageTechnology/jest.svg', 
-      'src/assets/database/imageTechnology/javascript.svg', 
-    ],
+    shortDescription: "API Full Stack com TDD, Sequelize e integração docker-compose. Exibe e edita jogos, classificações e partidas.",
+    description: "O projeto Trybe Futebol Clube (TFC) é uma aplicação Full Stack que exibe informações sobre jogos e classificações de futebol. O desenvolvimento usará o método TDD para criar uma API e integrar as aplicações com o banco de dados atraves do docker-compose. O back-end será modelado com Sequelize e será consumido pelo front-end fornecido no projeto pela trybe. Ao fazer login, os usuários poderão ver as informações e também alterar resultados das partidas e inserir partidas em andamento.",
+    desing: { 
+      img: "", 
+      desingType: "Diagrama ER", 
+      describe: "Esse diagrama foi fornecido pela Trybe para construção das tabelas"
+    },
+    technologies: [ JavascriptSVG, ReactSVG, exprssSVG, typescript, docker, sequelize, mysql, jwt, Mocha, chai],
     links: [
-      {link: 'https://gcontrole.com/', name:'PREVIEW' },
-      {link: 'https://github.com/ViniciusSoares21', name:'GITHUB' }
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/trybe-futebol-clube', name:'GITHUB' }
+    ],
+    type: '/fullstack',
+    showOnHome: true
+  },
+  {
+    image: 'src/assets/database/image/BlogAPI.png',
+    title: 'Blogs API',
+    shortDescription: "Esse projeto foi desenvolvido para a criação de uma API com o banco de dados Mysql, estruturado a partir dos princios de POO e SOLID, destinados para a criação de um blog.",
+    description: "Esse projeto foi desenvolvido para a criação de uma API com o banco de dados Mysql, estruturado a partir dos princios POO e SOLID, destinados para a criação de um blog. Durante o desenvolvimento, foi criada uma aplicação em Node.js utilizando o pacote sequelize para implementar as funcionalidades de criação, (CRUD) de posts, e login. Foram criados endpoints que estão conectados ao banco de dados, seguindo os princípios do REST. Para criar um post, é preciso fornecer dados de usuário e realizar o login, o que reforça a conexão entre usuário e post. Além disso, foram usadas categorias para classificar os posts, estabelecendo ligações entre posts e categorias, assim como entre categorias e posts.",
+    desing: { 
+      img: "https://github.com/ViniciusSoares21/blogs-api/raw/main/diagrama%20ER.png", 
+      desingType: "Diagrama ER", 
+      describe: "Esse diagrama foi fornecido pela Trybe para construção das tabelas"
+    },
+    technologies: [ JavascriptSVG, exprssSVG, docker, sequelize, mysql, jwt],
+    links: [
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/blogs-api', name:'GITHUB' }
     ],
     type: '/backend',
-    showOnHome: true
-  },
-  {
-    image: 'src/assets/database/image/Rectangle2.png',
-    title: 'App de Recipes',
-    shortDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley ",
-    description: 'NOT IMPLEMETION',
-    technologies: [
-      'src/assets/database/imageTechnology/react.svg', 
-      'src/assets/database/imageTechnology/jest.svg', 
-      'src/assets/database/imageTechnology/javascript.svg', 
-    ],
-    links: [
-      {link: 'https://gcontrole.com/', name:'PREVIEW' },
-      {link: 'https://github.com/ViniciusSoares21', name:'GITHUB' }
-    ],
-    type: '/frontend',
-    showOnHome: true
-  },
-  {
-    image: 'src/assets/database/image/Rectangle2.png',
-    title: 'gcontrole',
-    shortDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley ",
-    description: 'NOT IMPLEMETION',
-    technologies: [
-      'src/assets/database/imageTechnology/react.svg', 
-      'src/assets/database/imageTechnology/jest.svg', 
-      'src/assets/database/imageTechnology/javascript.svg', 
-    ],
-    links: [
-      {link: 'https://gcontrole.com/', name:'PREVIEW' },
-      {link: 'https://github.com/ViniciusSoares21', name:'GITHUB' }
-    ],
-    type: '/frontend',
     showOnHome: true
   },
 ]
