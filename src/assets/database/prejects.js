@@ -10,6 +10,7 @@ const jwt = 'src/assets/database/imageTechnology/jwt.svg';
 const Mocha = 'src/assets/database/imageTechnology/mocha.svg';
 const chai = 'src/assets/database/imageTechnology/chai.svg';
 const node = 'src/assets/database/imageTechnology/nodejs.svg'
+const mongoDB = 'src/assets/database/imageTechnology/mongodb.svg';
 
 
 const projects = [
@@ -66,6 +67,24 @@ const projects = [
     ],
     type: '/backend',
     showOnHome: true
+  },
+  {
+    image: 'src/assets/database/image/CarShop.png',
+    title: 'Car Shop',
+    shortDescription: "Neste projeto, apliquei os princípios de Programação Orientada a Objetos (POO) para construir uma API com operações CRUD para gerenciar uma concessionária de veículos. Utilizei o banco de dados MongoDB e o framework Mongoose para essa finalidade.",
+    description: "Neste projeto, apliquei os princípios de Programação Orientada a Objetos (POO) para construir uma API com operações CRUD para gerenciar uma concessionária de veículos. Utilizei o banco de dados MongoDB e o framework Mongoose para essa finalidade.",
+    desing: { 
+      img: "", 
+      desingType: "", 
+      describe: ""
+    },
+    technologies: [ typescript, docker, node, exprssSVG, mongoDB, Mocha, chai],
+    links: [
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/car-shop', name:'GITHUB' }
+    ],
+    type: '/backend',
+    showOnHome: false
   },
 ]
  
