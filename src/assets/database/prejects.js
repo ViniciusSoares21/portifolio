@@ -99,7 +99,7 @@ const projects = [
     technologies: [ JavascriptSVG, ReactSVG, ],
     links: [
       {link: 'https://gcontrole.com/', name:'PREVIEW' },
-      {link: 'https://github.com/ViniciusSoares21/car-shop', name:'GITHUB' },
+      {link: 'https://github.com/ViniciusSoares21/gcontrole', name:'GITHUB' },
       {link: 'https://www.figma.com/file/ovOiHRTWHPXHNq9OB4sVeZ/gcontrole?type=design&node-id=0%3A1&mode=design&t=zlOAocFIw8ZLAKca-1', name:'FIGMA' },
     ],
     type: '/frontend',
