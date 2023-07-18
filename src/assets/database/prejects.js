@@ -66,7 +66,7 @@ const projects = [
       {link: 'https://github.com/ViniciusSoares21/trybers-and-dragons', name:'GITHUB' }
     ],
     type: '/backend',
-    showOnHome: true
+    showOnHome: false
   },
   {
     image: 'src/assets/database/image/CarShop.png',
@@ -85,6 +85,25 @@ const projects = [
     ],
     type: '/backend',
     showOnHome: false
+  },
+  {
+    image: 'src/assets/database/image/gcontrole.png',
+    title: 'gcontrole',
+    shortDescription: "O projeto 'gcontrole' é um site desenvolvido com foco no front-end, com o objetivo de oferecer um ambiente prático para organizar e visualizar seus gastos.",
+    description: "O projeto 'gcontrole' é um site desenvolvido com foco no front-end, com o objetivo de oferecer um ambiente prático para organizar e visualizar seus gastos. Através de uma página dedicada à adição de despesas, divididas por categorias, e duas páginas com gráficos, você poderá obter uma perspectiva analítica detalhada e visualmente atraente dos seus gastos.",
+    desing: { 
+      img: "https://github.com/ViniciusSoares21/gcontrole/raw/main/figma.png", 
+      desingType: "DESIGN", 
+      describe: "O desing foi desenvolvido para mobile, onde o objetivo é a fácil visualização"
+    },
+    technologies: [ JavascriptSVG, ReactSVG, ],
+    links: [
+      {link: 'https://gcontrole.com/', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/car-shop', name:'GITHUB' },
+      {link: 'https://www.figma.com/file/ovOiHRTWHPXHNq9OB4sVeZ/gcontrole?type=design&node-id=0%3A1&mode=design&t=zlOAocFIw8ZLAKca-1', name:'FIGMA' },
+    ],
+    type: '/frontend',
+    showOnHome: true
   },
 ]
  
