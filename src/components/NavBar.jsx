@@ -18,7 +18,7 @@ function NavBar() {
   const handleMouseProjectsEnter = (event) => {
     const positionBtn = event.target.getBoundingClientRect();
     const y = positionBtn.top +45
-    const x = positionBtn.right -100
+    const x = positionBtn.right -108
     setPositionMenuProject({x, y});
     setIsProjectsVisible(true)
   };
@@ -75,16 +75,23 @@ function NavBar() {
           onMouseLeave={menuProjectsNotVisible}
           >
             <Link className={styles.linkPreject} to="/fullstack">
-              <p style={{ marginTop: '12px'}}>💼Full-stack</p>
+              <p style={{ marginTop: '12px', marginLeft: '5px'}}>💼Full-stack</p>
             </Link>
             <Link className={styles.linkPreject} to="/frontend">
-              <p style={{ marginTop: '12px' }}>🖥️Front-end</p>
+              <p style={{ marginTop: '12px', marginLeft: '5px' }}>🖥️Front-end</p>
             </Link>
             <Link className={styles.linkPreject} to="/backend">
               <p 
-              style={{ marginTop: '12px', textAlign: 'center', marginRight: "3px" }}
+              style={{ marginTop: '12px',   marginLeft: '5px' }}
               >
                 🗄️Back-end
+              </p>
+            </Link>
+            <Link className={styles.linkPreject} to="/datascience">
+              <p 
+              style={{ marginTop: '12px', marginLeft: '5px'}}
+              >
+                🔬Data science
               </p>
             </Link>
           </div>

@@ -9,7 +9,8 @@ import styles from './Projects.module.css'
 const title = {
   "/fullstack": 'FULL-STACK',
   "/frontend": 'FRONT-END',
-  "/backend": 'BACK-END'
+  "/backend": 'BACK-END',
+  "/datascience": 'Ciências de dados',
 }
 
 function Projects() {

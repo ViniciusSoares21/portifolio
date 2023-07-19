@@ -32,10 +32,10 @@
 }
 
 .menuProjectLink {
-  text-align: center;
+  text-align: initial;
   display: block;
-  height: 110px;
-  width: 115px;
+  height: 135px;
+  width: 125px;
   position: absolute;
   border-radius: 8px;
   justify-content: center;
