@@ -11,6 +11,9 @@ const Mocha = 'src/assets/database/imageTechnology/mocha.svg';
 const chai = 'src/assets/database/imageTechnology/chai.svg';
 const node = 'src/assets/database/imageTechnology/nodejs.svg'
 const mongoDB = 'src/assets/database/imageTechnology/mongodb.svg';
+const python = 'src/assets/database/imageTechnology/Python.svg';
+const pytest = 'src/assets/database/imageTechnology/pytest.svg';
+const flask = 'src/assets/database/imageTechnology/flesk.svg';
 
 
 const projects = [
@@ -103,6 +106,24 @@ const projects = [
       {link: 'https://www.figma.com/file/ovOiHRTWHPXHNq9OB4sVeZ/gcontrole?type=design&node-id=0%3A1&mode=design&t=zlOAocFIw8ZLAKca-1', name:'FIGMA' },
     ],
     type: '/frontend',
+    showOnHome: true
+  },
+  {
+    image: 'src/assets/database/image/Job.png',
+    title: 'Job insights',
+    shortDescription: "Neste projeto, implementei análises de um conjunto de dados sobre empregos.",
+    description: "Neste projeto, implementei análises de um conjunto de dados sobre empregos. Escrevi testes com Pytest para garantir a qualidade das análises. Além disso, enfrentei o desafio de criar uma rota e view para um novo recurso no Flask. Durante o projeto, aprimorei habilidades em Python, estruturas condicionais, repetições, manipulação de arquivos, funções, tratamento de exceções e importação de módulos personalizados.",
+    desing: { 
+      img: "", 
+      desingType: "", 
+      describe: ""
+    },
+    technologies: [ python, pytest, flask],
+    links: [
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/job-insights', name:'GITHUB' },
+    ],
+    type: '/datascience',
     showOnHome: true
   },
 ]
