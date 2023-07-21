@@ -14,6 +14,7 @@ const mongoDB = 'src/assets/database/imageTechnology/mongodb.svg';
 const python = 'src/assets/database/imageTechnology/Python.svg';
 const pytest = 'src/assets/database/imageTechnology/pytest.svg';
 const flask = 'src/assets/database/imageTechnology/flesk.svg';
+const beautifulsoup = 'src/assets/database/imageTechnology/-beautifulsoup-black.svg';
 
 
 const projects = [
@@ -140,6 +141,24 @@ const projects = [
     links: [
       {link: '', name:'PREVIEW' },
       {link: 'https://github.com/ViniciusSoares21/inventory-report', name:'GITHUB' },
+    ],
+    type: '/datascience',
+    showOnHome: false
+  },
+  {
+    image: 'src/assets/database/image/tech-news.png',
+    title: 'Tech news',
+    shortDescription: "Neste projeto, o objetivo principal é fazer consultas em notícias sobre tecnologia. As notícias serão obtidas por meio da raspagem do blog da Trybe.",
+    description: "Neste projeto, o objetivo principal é fazer consultas em notícias sobre tecnologia. As notícias serão obtidas por meio da raspagem do blog da Trybe. As principais habilidades trabalhadas incluem o uso do terminal interativo do Python, a escrita e importação de módulos personalizados, a aplicação de técnicas de raspagem de dados para extrair informações de conteúdo HTML e o armazenamento dos dados coletados em um banco de dados. Com essas etapas, o projeto permitirá realizar consultas e análises em notícias relevantes sobre tecnologia, obtidas através da raspagem do blog da Trybe.",
+    desing: { 
+      img: "", 
+      desingType: "", 
+      describe: ""
+    },
+    technologies: [python, pytest, beautifulsoup],
+    links: [
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/tech-news', name:'GITHUB' },
     ],
     type: '/datascience',
     showOnHome: false
