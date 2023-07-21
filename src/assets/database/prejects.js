@@ -15,6 +15,7 @@ const python = 'src/assets/database/imageTechnology/Python.svg';
 const pytest = 'src/assets/database/imageTechnology/pytest.svg';
 const flask = 'src/assets/database/imageTechnology/flesk.svg';
 const beautifulsoup = 'src/assets/database/imageTechnology/-beautifulsoup-black.svg';
+const pandas = 'src/assets/database/imageTechnology/pandas.svg';
 
 
 const projects = [
@@ -159,6 +160,24 @@ const projects = [
     links: [
       {link: '', name:'PREVIEW' },
       {link: 'https://github.com/ViniciusSoares21/tech-news', name:'GITHUB' },
+    ],
+    type: '/datascience',
+    showOnHome: false
+  },
+  {
+    image: 'src/assets/database/image/restaurant-orders.png',
+    title: 'Restaurant orders',
+    shortDescription: "Neste projeto, finalizarei uma ferramenta de construção de cardápios para o restaurante",
+    description: "Neste projeto, finalizarei uma ferramenta de construção de cardápios para o restaurante 'Spaghetti Shrimp Chapa Quente Curry'. Serão realizados testes para as classes existentes e desenvolvida uma nova classe para mapear pratos e suas receitas com ingredientes e quantidades. Também criarei classes para gerar os cardápios para os clientes e gerenciar o estoque de ingredientes. Praticarei o uso de Hashmaps com Dict e Set do Python, a ferramenta Pandas com DataFrame, conhecimentos de testes de software e orientação a objetos. O objetivo é obter um código limpo, de fácil manutenção e legibilidade, melhorando a gestão das receitas e estoque do restaurante.",
+    desing: { 
+      img: "", 
+      desingType: "", 
+      describe: ""
+    },
+    technologies: [python, pytest, pandas],
+    links: [
+      {link: '', name:'PREVIEW' },
+      {link: 'https://github.com/ViniciusSoares21/restaurant-orders', name:'GITHUB' },
     ],
     type: '/datascience',
     showOnHome: false
