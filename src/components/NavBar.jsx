@@ -130,7 +130,9 @@ function NavBar() {
           >
           <img style={{ marginTop: '10px' }} src={imgGitHub} alt="GitHub" />
         </a>
+          <Link to="/Contact">
             <img style={{ marginTop: '8px' }} src={imgEmail} alt="Email" />
+          </Link>
           </div>
         }
         <Link className={ styles.links } to="/About">

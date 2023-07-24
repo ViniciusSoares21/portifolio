@@ -5,6 +5,7 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 import Projects from './pages/Projects'
 import ProjectDetails from './pages/ProjectDetails'
+import Contact from './pages/Contact'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='/About' element={ <About />} />
+        <Route path='/Contact' element={ <Contact />} />
         <Route path='/fullstack' element={ <Projects />} />
         <Route path='/frontend' element={ <Projects />} />
         <Route path='/backend' element={ <Projects />} />
