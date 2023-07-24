@@ -16,21 +16,24 @@ function Card({title, shortDescription, image, technologies, links}) {
       onMouseLeave={handleMouseProjectsLeave}
     >
       <div>
-        <Link to={{
-          pathname: `/project/${title}`, 
-          state: { title } 
-        }}>
-          <img 
-            className={!isProjectsDetailsVisible ? styles.image : styles.imageWithDetail} 
-            src={image} 
-            alt=""
-          />
-        </Link>
-        {!isProjectsDetailsVisible &&
-          <div className={styles.title}>
-            <h4>{title}</h4>
-          </div>
-        }
+        <div className={!isProjectsDetailsVisible && styles.containerMin}>
+          <Link 
+            to={{
+              pathname: `/project/${title}`, 
+              state: { title }
+            }}>
+            <img 
+              className={!isProjectsDetailsVisible ? styles.image : styles.imageWithDetail} 
+              src={image} 
+              alt=""
+            />
+          </Link>
+          {!isProjectsDetailsVisible &&
+            <div className={styles.title}>
+              <h4>{title}</h4>
+            </div>
+          }
+        </div>
         {isProjectsDetailsVisible ? (
           <div className={styles.subContainer}>
             <p>{shortDescription}</p>

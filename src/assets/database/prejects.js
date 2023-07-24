@@ -53,7 +53,7 @@ const projects = [
       {link: 'https://github.com/ViniciusSoares21/blogs-api', name:'GITHUB' }
     ],
     type: '/backend',
-    showOnHome: true
+    showOnHome: false
   },
   {
     image: 'src/assets/database/image/trybeAndDragons.png',
@@ -180,7 +180,7 @@ const projects = [
       {link: 'https://github.com/ViniciusSoares21/restaurant-orders', name:'GITHUB' },
     ],
     type: '/datascience',
-    showOnHome: false
+    showOnHome: true
   },
 ]
  
