@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import style from './Contact.module.css';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -17,14 +18,14 @@ function Contact() {
     }
 
     
-    /* const templateParams = {
+    const templateParams = {
       from_name: name,
       message: message,
       email: email
     }
 
-    emailjs.send("service_***", "template_***p4a", templateParams, "dHvEqm1s-*****4q")
-    .then((response) => {
+    emailjs.send("service_7y0q0f9", "template_dv265vv", templateParams, "PXmACUmDCE_IH0ZO6")
+    .then((res) => {
       alert("EMAIL ENVIADO COM SUCESSO");
       setName('')
       setEmail('')
@@ -32,7 +33,7 @@ function Contact() {
 
     }, (err) => {
       console.log("ERRO: ", err)
-    }) */
+    })
 
   }
 
