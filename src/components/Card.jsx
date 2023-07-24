@@ -45,7 +45,14 @@ function Card({title, shortDescription, image, technologies, links}) {
             </div>
             <div className={styles.containerLinks}>
             {links.map((item) => 
-                <a key={item.link + item.name} href={item.link}>{item.name}</a>
+                <a 
+                  key={item.link + item.name} 
+                  href={item.link}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                    {item.name}
+                </a>
               )}
             </div>
           </div>
