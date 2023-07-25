@@ -12,7 +12,7 @@ function App() {
   return (
     <main>
       <Routes>
-        <Route path='/Viniciussoares21.github.io' element={ <Home /> } />
+        <Route path='/' element={ <Home /> } />
         <Route path='/About' element={ <About />} />
         <Route path='/Contact' element={ <Contact />} />
         <Route path='/fullstack' element={ <Projects />} />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function NotFound() {
   return (
     <section>
-      <Link to="/Viniciussoares21.github.io">
+      <Link to="/">
         <h3>Volatar para HOME</h3>
       </Link>
     </section>
