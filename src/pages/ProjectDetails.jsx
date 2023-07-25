@@ -21,7 +21,7 @@ function ProjectDetails() {
             <article key={title} className={styles.subContainer}>
               <img 
                 className={styles.image}
-                src={`${publicPath}${image}`} alt="imagem do projeto"/>
+                src={image} alt="imagem do projeto"/>
               <h3 
                 style={{ textAlign: 'center', marginBottom: '20px', fontSize: '25px'}}
               >

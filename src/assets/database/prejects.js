@@ -16,11 +16,12 @@ const pytest = 'src/assets/database/imageTechnology/pytest.svg';
 const flask = 'src/assets/database/imageTechnology/flesk.svg';
 const beautifulsoup = 'src/assets/database/imageTechnology/-beautifulsoup-black.svg';
 const pandas = 'src/assets/database/imageTechnology/pandas.svg';
+import imggcontrole from '../database/image/gcontrole.png'
 
 
 const projects = [
   {
-    image: 'src/assets/database/image/Rectangle2.png',
+    image: 'https://github.com/ViniciusSoares21/imagens-para-portfolio/raw/main/image/Rectangle2.png',
     title: 'Trybe futebol clube',
     shortDescription: "API Full Stack com TDD, Sequelize e integração docker-compose. Exibe e edita jogos, classificações e partidas.",
     description: "O projeto Trybe Futebol Clube (TFC) é uma aplicação Full Stack que exibe informações sobre jogos e classificações de futebol. O desenvolvimento usará o método TDD para criar uma API e integrar as aplicações com o banco de dados atraves do docker-compose. O back-end será modelado com Sequelize e será consumido pelo front-end fornecido no projeto pela trybe. Ao fazer login, os usuários poderão ver as informações e também alterar resultados das partidas e inserir partidas em andamento.",
@@ -92,7 +93,7 @@ const projects = [
     showOnHome: false
   },
   {
-    image: 'src/assets/database/image/gcontrole.png',
+    image: imggcontrole,
     title: 'gcontrole',
     shortDescription: "O projeto 'gcontrole' é um site desenvolvido com foco no front-end, com o objetivo de oferecer um ambiente prático para organizar e visualizar seus gastos.",
     description: "O projeto 'gcontrole' é um site desenvolvido com foco no front-end, com o objetivo de oferecer um ambiente prático para organizar e visualizar seus gastos. Através de uma página dedicada à adição de despesas, divididas por categorias, e duas páginas com gráficos, você poderá obter uma perspectiva analítica detalhada e visualmente atraente dos seus gastos.",
