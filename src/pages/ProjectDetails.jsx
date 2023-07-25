@@ -67,7 +67,7 @@ function ProjectDetails() {
               </h3>
               <div className={styles.containerTechnologies}>
                 {technologies.map((item) => 
-                  <img key={item} src={`${publicPath}${item}`} alt="tecnoligia" />
+                  <img key={item} src={item} alt="tecnoligia" />
                 )}
               </div>
               <h3 style={{ 
