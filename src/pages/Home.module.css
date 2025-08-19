@@ -1,44 +1,70 @@
-.container {
-  max-width: 1020px;
-  margin: auto;
+
+/* ABOUT */
+.about {
+  padding: 5rem 10%;
+  background: #161b2f; /* azul escuro intermediário */
+  text-align: center;
 }
 
-.conteinerAbout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  margin-top: 70px;
-  width: 90%;
+.about h2 {
+  color: #f1c40f;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
-.conteinerAbout img {
-  height: 220px;
-  margin-right: 5%;
+.about p {
+  color: #cfd2da;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.conteinerAbout p {
-  height: 220px;
-  margin-left: 5%;
-  width: 30%;
+/* PROJECTS */
+.projects {
+  padding: 5rem 10%;
+  background: #0d1117;
+  text-align: center;
 }
 
-.container h3 {
-  margin-top: 100px;
-  margin-left: 20px;
-  font-size: large;
+.projects h2 {
+  color: #f1c40f;
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
-.containerCards {
-  margin-top: 30px;
-  margin-bottom: 74px;
-  display: flex;
-  justify-content: space-around;
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
+.linkMore {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #f1c40f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
 
-.verticalLine {
-  border-left: 1px solid black;
-  background-color: 'black';
-  height: 300px;
+.linkMore:hover {
+  text-decoration: underline;
+}
+
+/* CTA FINAL */
+.ctaSection {
+  padding: 5rem 10%;
+  background: #161b2f;
+  text-align: center;
+}
+
+.ctaSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.ctaSection p {
+  color: #b0b3b8;
+  margin-bottom: 2rem;
 }

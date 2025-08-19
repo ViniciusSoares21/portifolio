@@ -1,5 +1,4 @@
 import Home from './pages/Home'
-import './App.css'
 import { Route, Routes } from 'react-router-dom'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
