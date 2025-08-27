@@ -4,25 +4,48 @@ import Card from "../components/Card";
 import projects from "../assets/database/prejects";
 import styles from "./Home.module.css";
 import imgAvatar from "../image/Fotoperfil.svg";
+import imgGitHub from '../image/github.svg';
+import imgLinkedin from '../image/linkedin.svg';
+import imgArrowUp from '../image/arrowUp.svg';
 
 function Home() {
   return (
-    <section className="bg-black text-amber-50">
+    <section className="bg-dark text-light">
       <NavBar />
-      <header className="flex flex-col md:flex-row justify-center items-center md:items-start bg-gray-900 px-4 py-16 md:p-24 gap-8 md:gap-16">
+      <header className="flex flex-col md:flex-row justify-center items-center md:items-start px-4 py-16 md:p-24 gap-8 md:gap-16">
         <div className="text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl text-white font-bold font-[Arial] mb-4">
+          <h1 className="text-4xl md:text-6xl text-light font-bold font-[Arial] mb-4">
             Vinicius Soares
           </h1>
-          <p className="mt-4 md:mt-6 text-base md:text-xl text-gray-300 max-w-xl font-[Arial]">
-            Desenvolvedor <strong className="text-yellow-500">Fullstack Júnior</strong> apaixonado por
-            transformar ideias em soluções digitais modernas, escaláveis e com <strong className="text-yellow-500">Qualidade.</strong>
+          <p className="mt-4 md:mt-6 text-base md:text-xl max-w-xl font-[Arial]">
+            Desenvolvedor <strong className="text-stone-paste">Fullstack Júnior</strong> apaixonado por
+            transformar ideias em soluções digitais modernas, escaláveis e com <strong className="text-stone-paste">Qualidade.</strong>
           </p>
-          <a href="#projetos" className="inline-block mt-6 py-3.5 px-6 md:px-8 bg-yellow-300 text-gray-900 font-bold rounded-full no-underline transition-all duration-300 ease-in-out hover:bg-yellow-400 hover:-translate-y-1">
+          <a href="#projetos" className="inline-block mt-6 py-3.5 px-6 md:px-8 bg-light text-dark font-bold rounded-full no-underline transition-all duration-300 ease-in-out hover:bg-yellow-400 hover:-translate-y-1">
             Ver Meus Projetos
           </a>
+          <div className="flex justify-end content-center items-end gap-4 mr-30 md:mr-0 md:mt-40">
+          <a className=" flex items-center mt-6 py-0.2 px-6 md:px-4 bg-light text-dark font-bold rounded-full no-underline transition-all duration-300 ease-in-out hover:bg-yellow-400 hover:-translate-y-1">
+            Curriculo
+            <img src={imgArrowUp} alt="Linkedin" />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/vinicius-soares21/"
+            target="_blank" 
+            rel="noopener noreferrer"
+            >
+            <img src={imgLinkedin} alt="Linkedin" />
+          </a>
+          <a 
+            href="https://github.com/ViniciusSoares21"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img src={imgGitHub} alt="GitHub" />
+          </a>
         </div>
-        <img src={imgAvatar} alt="Vinicius Soares" className="w-64 md:w-80 lg:w-115 rounded-xl border-yellow-300 shadow-[10px_0_90px] shadow-yellow-300/22" />
+        </div>
+        <img src={imgAvatar} alt="Vinicius Soares" className="w-64 md:w-80 lg:w-115 rounded-xl border-yellow-300" />
       </header>
 
       {/* About Section */}
