@@ -2,7 +2,6 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Card from "../components/Card";
 import projects from "../assets/database/prejects";
-import styles from "./Home.module.css";
 import imgAvatar from "../image/perfil-uop2.jpg";
 import imgGitHub from '../image/github.svg';
 import imgLinkedin from '../image/linkedin.svg';
@@ -14,7 +13,7 @@ import iconDevOps from "../image/DevOps.svg";
 
 function Home() {
   return (
-    <section className="bg-dark text-light">
+    <main className="bg-dark text-light">
       <NavBar />
       <header className="flex flex-col md:flex-row justify-center items-center md:items-start px-4 py-16 md:p-24 gap-8 md:gap-16">
         <div className="text-center md:text-left">
@@ -80,9 +79,15 @@ function Home() {
       </section>
 
       {/* Projetos Section */}
-      <section id="projetos" className={styles.projects}>
-        <h2>Projetos em Destaque</h2>
-        <div className={styles.projectsGrid}>
+      <section id="projetos" className="flex flex-col items-center mt-24  font-[Arial]">
+        <h2 className="mb-10 font-bold text-4xl">Projetos</h2>
+        <div className="flex gap-4 justify-center mb-8 font-semibold">
+          <p className="p-1.5 border-2 border-light rounded-4xl bg-light text-dark">Destaques</p>
+          <p className="p-1.5 border-2 border-light rounded-4xl">Full-stack</p>
+          <p className="p-1.5 border-2 border-light rounded-4xl">Back-end</p>
+          <p className="p-1.5 border-2 border-light rounded-4xl">Front-end</p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-6">
           {projects
             .filter((item) => item.showOnHome === true)
             .map(({ title, shortDescription, image, technologies, links }) => (
@@ -96,25 +101,9 @@ function Home() {
               />
             ))}
         </div>
-        <a href="/projetos" className={styles.linkMore}>
-          Ver todos os projetos →
-        </a>
       </section>
-
-      {/* CTA Final */}
-      <section className={styles.ctaSection}>
-        <h2>Pronto para dar vida às suas ideias?</h2>
-        <p>
-          Entre em contato e vamos conversar sobre como posso contribuir com sua
-          equipe.
-        </p>
-        <a href="mailto:vinicius.dev@gmail.com" className={styles.ctaBtn}>
-          Entrar em Contato
-        </a>
-      </section>
-
       <Footer />
-    </section>
+    </main>
   );
 }
 
