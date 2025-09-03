@@ -1,14 +1,11 @@
-import React from 'react'
-import styles from './Footer.module.css'
 import imgLinkedinSvg from '../image/linkedin.svg'
 import imgGitHubSvg from '../image/github.svg'
 
 function Footer() {
   return (
-    <footer className={ styles.container }>
+    <footer className="flex justify-center mt-14 text-light font-semibold font-[Arial]">
       <a 
         href="https://www.linkedin.com/in/vinicius-soares21/" 
-        className={styles.text}
         target="_blank" 
         rel="noopener noreferrer"
         >
@@ -19,14 +16,14 @@ function Footer() {
         target="_blank" 
         rel="noopener noreferrer"
         >
-        <img className={ styles.image } src={imgLinkedinSvg} alt="Linkedin" />
+        <img className="ml-2" src={imgLinkedinSvg} alt="Linkedin" />
       </a>
       <a 
         href="https://github.com/ViniciusSoares21"
         target="_blank" 
         rel="noopener noreferrer"
         >
-        <img className={ styles.image } src={imgGitHubSvg} alt="GitHub" />
+        <img className="ml-2" src={imgGitHubSvg} alt="GitHub" />
       </a>
     </footer>
   )
