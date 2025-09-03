@@ -3,7 +3,7 @@ import imgGitHubSvg from '../image/github.svg'
 
 function Footer() {
   return (
-    <footer className="flex justify-center mt-14 text-light font-semibold font-[Arial]">
+    <footer className="flex justify-center mt-14 text-light bg-dark p-4 font-semibold font-[Arial]">
       <a 
         href="https://www.linkedin.com/in/vinicius-soares21/" 
         target="_blank" 
