@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Card from "../components/Card";
 import projects from "../assets/database/prejects";
 import styles from "./Home.module.css";
-import imgAvatar from "../image/Fotoperfil.svg";
+import imgAvatar from "../image/perfil-uop2.jpg";
 import imgGitHub from '../image/github.svg';
 import imgLinkedin from '../image/linkedin.svg';
 import imgArrowUp from '../image/arrowUp.svg';
@@ -45,7 +45,7 @@ function Home() {
           </a>
         </div>
         </div>
-        <img src={imgAvatar} alt="Vinicius Soares" className="w-64 md:w-80 lg:w-115 rounded-xl border-yellow-300" />
+        <img src={imgAvatar} alt="Vinicius Soares" className="w-64 md:w-80 lg:w-115 rounded-xl overflow-hidden object-cover hover:scale-110"/>
       </header>
 
       {/* About Section */}
