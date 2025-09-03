@@ -7,6 +7,10 @@ import imgAvatar from "../image/perfil-uop2.jpg";
 import imgGitHub from '../image/github.svg';
 import imgLinkedin from '../image/linkedin.svg';
 import imgArrowUp from '../image/arrowUp.svg';
+import CardServices from "../components/CardServices";
+import iconFront from "../image/Front-end.svg";
+import iconBack from "../image/Back-end.svg";
+import iconDevOps from "../image/DevOps.svg";
 
 function Home() {
   return (
@@ -49,16 +53,30 @@ function Home() {
       </header>
 
       {/* About Section */}
-      <section className={styles.about}>
-        <h2>Sobre mim</h2>
-        <p>
-          Estou sempre buscando inovação, conhecimento e evolução na área de
-          tecnologia. Tenho experiência prática com{" "}
-          <strong>Node.js, React, Sequelize, PostgreSQL</strong> e estou
-          preparado para atuar como <strong>Dev Backend</strong> ou{" "}
-          <strong>Fullstack Júnior</strong>. <br /> Meu objetivo é criar
-          soluções que geram valor real para negócios e pessoas.
-        </p>
+      <section className="flex flex-col items-center font-[Arial]">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-2">Serviços</h2>
+          <p>
+            Sou  <strong>Desenvolvedor web Full-stack.</strong> Com mais de <strong>1 ano</strong> de exeperiência.
+          </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-20">
+          <CardServices
+            image={iconFront}
+            name="Front-end"
+            skills="Typescript / React / Html / Css3 / Jest / Tailwindcss"
+          />
+          <CardServices
+            image={iconBack}
+            name="Back-end"
+            skills="Nodejs / Express.js / Jwt / Sequelize / Mysql / Chai / Sinon / Mocha"
+          />
+          <CardServices
+            image={iconDevOps}
+            name="DevOps"
+            skills="Docker / (CI/CD) / Bash / GitHub"
+          />
+        </div>
       </section>
 
       {/* Projetos Section */}

@@ -1,24 +1,4 @@
 
-/* ABOUT */
-.about {
-  padding: 5rem 10%;
-  background: #161b2f; /* azul escuro intermediário */
-  text-align: center;
-}
-
-.about h2 {
-  color: #f1c40f;
-  margin-bottom: 1.5rem;
-  font-size: 2rem;
-}
-
-.about p {
-  color: #cfd2da;
-  line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
 /* PROJECTS */
 .projects {
   padding: 5rem 10%;
