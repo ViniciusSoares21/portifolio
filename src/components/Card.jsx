@@ -2,8 +2,9 @@ import {useState} from 'react';
 import PropTypes from 'prop-types';
 import styles from './Card.module.css';
 import { Link } from 'react-router-dom';
+import iconArrowLeft from "../image/Union.svg";
 
-function Card({title, shortDescription, image, technologies, links}) {
+function Card({title, shortDescription, image}) {
   const [isProjectsDetailsVisible, setIsProjectsDetailsVisible] = useState(false);
 
   const handleMouseProjectsEnter = () => setIsProjectsDetailsVisible(true);
@@ -11,54 +12,36 @@ function Card({title, shortDescription, image, technologies, links}) {
 
   return (
     <div
-      className={isProjectsDetailsVisible && styles.container}
+      className={styles.container}
       onMouseEnter={handleMouseProjectsEnter}
       onMouseLeave={handleMouseProjectsLeave}
     >
       <div>
-        <div className={!isProjectsDetailsVisible && styles.containerMin}>
-          <Link 
-            to={{
-              pathname: `/project/${title}`, 
-              state: { title }
-            }}>
+        <div>
             <img 
-              className={!isProjectsDetailsVisible ? styles.image : styles.imageWithDetail} 
+              className={styles.image} 
               src={image} 
               alt=""
             />
-          </Link>
-          {!isProjectsDetailsVisible &&
             <div className={styles.title}>
               <h4>{title}</h4>
             </div>
-          }
         </div>
-        {isProjectsDetailsVisible ? (
+        {isProjectsDetailsVisible && (
           <div className={styles.subContainer}>
             <p>{shortDescription}</p>
-            <h4>TECNOLOGIAS:</h4>   
-            <div className={styles.containerTechnologies}>
-              {technologies.map((item) => 
-                <img key={item} src={item} alt="tecnoligia" />
-              )}
+            <Link 
+            to={{
+              pathname: `/project/${title}`, 
+              state: { title },
+            }}>
+            <div className='flex gap-2 justify-center items-center mt-10'>
+              <p className="p-1.5 border-2 font-semibold border-light rounded-4xl bg-light text-dark">Ver mais </p>
+              <img className="w-8 h-8  bg-light p-1 rounded-full" src={iconArrowLeft} alt="" />
             </div>
-            <div className={styles.containerLinks}>
-            {links.map((item) => 
-                <a 
-                  key={item.link + item.name} 
-                  href={item.link}
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                    {item.name}
-                </a>
-              )}
-            </div>
+          </Link>
           </div>
-        
-        ) : null
-        }
+        )}
       </div>
     </div>
   )
